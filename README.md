@@ -22,6 +22,7 @@ div > h1 {
     --h4: var(--base-size);
 }
 ```
+
 <!-- The style variables below will change the format of this markdown README -->
 
 <style>
@@ -48,8 +49,6 @@ div > h1 {
     }
 </style>
 
-
-
 #### CSS Precedence
 
 - !important > ID > Class > Element for CSS selectors
@@ -64,8 +63,8 @@ div > h1 {
 - [Adobe Color](https://color.adobe.com/)
 - [fontpair](https://www.fontpair.co/)
 - [Google Fonts](https://fonts.google.com/)
-
 Pseudo elements can punctuate or be the prefix of a component
+- [ResponsiveBreakpoints](https://responsivebreakpoints.com/)
 
 ```
     /* This makes measuring on a webpage easier */
@@ -192,3 +191,39 @@ p {
 <div class="ol_body">Body</div>
 </div>
 
+<style>
+    .gap_example {
+        background-color: red;
+        height: 200px;
+        display: grid;
+        grid-template-columns: repeat(3, 1fr);
+    }
+
+    .gap_ex_elem {
+        display: inline;
+        background-color: blue;
+        margin: 1px 10px 20px 9px;; 
+    }
+</style>
+<div class="gap_example">
+<div class="gap_ex_elem elem1"></div>
+<div class="gap_ex_elem elem2"></div>
+<div class="gap_ex_elem elem3"></div>
+</div>
+
+#### Making grid responsive
+ - auto-fit
+ - auto-fill
+ - minmax
+
+
+ ### Flexbox
+#### Used for
+ - A series of boxes that are not the same size
+ - A series of boxes that are not in an even-sized grid
+ - When the same space between elements is important, not the same width of each element
+ - Flexbox wasn't designed to be locked down for layouts
+
+ ### Image Optimization
+ - Image Optimization - Addy Osmani
+ - the < picture> element can allow for responsively loading different source files based on media query
