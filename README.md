@@ -1,5 +1,42 @@
 # CSS
 
+<style>
+:root {
+    --bg-color: #344021;
+    --mg-color: #46592A;
+    --fg-color: #F2F2F2;
+
+    --text-color-light: #F2F2F2;
+    --text-color-dark: #C7D9A0;
+    --text-color-code: black;
+}
+
+body {
+    background-color: var(--bg-color);
+    color: var(--text-color-light);
+}
+
+h1, h2, h3, h4, h5, h6 {
+    color: var(--text-color-dark);
+}
+
+pre {
+    background-color: var(--mg-color);
+    box-shadow: 10px 10px 10px rgba(0, 0, 0, 0.2);
+    
+}
+
+a, a:hover {
+    color: var(--text-color-dark);
+}
+
+pre code {
+    background-color: var(--fg-color);
+    color: var(--text-color-code);
+    display: block;
+    padding: 2vw;
+}
+</style>
 
  ### CSS Reset 
  - Andy Bell's A (more) Modern CSS Reset 2025
@@ -308,3 +345,48 @@ p {
  ### Image Optimization
  - Image Optimization - Addy Osmani
  - the < picture> element can allow for responsively loading different source files based on media query
+
+
+#### CSS Layers
+
+```
+@layer base_layer {
+
+}
+
+@above_base_layer {
+    /*Highest precedence*/
+}
+```
+```
+/*Alternatively, comma seperated list*/
+
+@layer above_base_layer, base_layer
+
+/*Precedence now flipped*/
+```
+
+#### Role Selector 
+```
+<style>
+[role="a_role"] {
+    //applies to elements with this role
+}
+</style>
+
+<div role="a_role"></div>
+```
+
+#### Custom Color Variables
+```
+:root {
+    --red-color-400: 
+    /*Easily add in middletones in the future, if needed*/
+    --red-color-500: 
+}
+```
+
+### Typography
+- [Google Fonts](https://fonts.google.com/)
+- 
+
